@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@main
 
     - name: Deploy to Azure Web App 
-      uses: azure/webapps-deploy@v2.1.0
+      uses: azure/webapps-deploy@v2
       with:
       #Change the app-name to match what was provided to you in the publish settings file, this is in a naming covention of 'COURSENAME-STUDENTUID'
         app-name: 'cmst386-eallen63'
