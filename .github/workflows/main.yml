@@ -1,3 +1,4 @@
+name: Deploy HTML to AppServiceCMST386
 on:
   push:
     branches:
