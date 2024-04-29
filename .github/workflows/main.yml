@@ -10,8 +10,8 @@ jobs:
     steps:
     - uses: actions/checkout@main
 
-    - name: Deploy to Azure Web Apps
-      uses: azure/webapps-deploy@v1
+    - name: Azure Login
+      uses: Azure/login@v2.1.0
       with:
       #Change the app-name to match what was provided to you in the publish settings file, this is in a naming covention of 'COURSENAME-STUDENTUID'
         app-name: 'cmst386-eallen63'
