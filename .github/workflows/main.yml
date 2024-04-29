@@ -1,22 +1,16 @@
+name: Deploy HTML Files to AppServiceCMST386
 on:
   push:
-   branches:
+    branches:
       - main
-
 jobs:
-  builds-and-deploy:
+  build-and-deploy:
     runs-on: windows-latest
-
     steps:
-    - uses: actions/checkout@main
-
-    - name: Deploy to Azure Web Apps
+    - uses: actions/checkout@master
+    - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v1
       with:
-      #Change the app-name to match what was provided to you in the publish settings file, this is in a naming covention of 'COURSENAME-STUDENTUID'
         app-name: 'cmst386-eallen63'
         slot-name: 'production'
-      #Change the publish proflie to match what you named your secret setup in GitHub, example shown below
-        publish-proflie: ${{ secrets.AppServiceCMST386 }}
-      
-            
+        publish-profile: ${{ secrets.AppServiceCMST386 }}
